@@ -26,12 +26,11 @@ export default class Dashboard extends Component {
     return (
       <ScrollView>
       <View style = {{backgroundColor: "white"}}>
-        <Text> Dashboard </Text>
-        {UserOrAdmin == "Admin" && (
+       
           <Button
           large
           full
-          style={styles.StyleforButton}
+          style={styles.StyleforButton2}
           onPress = {() => this.props.navigation.navigate("CreateNewBus")}
           >
           <Text
@@ -44,8 +43,8 @@ export default class Dashboard extends Component {
             Add a New Bus{' '}
           </Text>
         </Button>
-        )}
-         {UserOrAdmin == "Admin" && (
+        
+         
           <Button
           large
           full
@@ -62,7 +61,7 @@ export default class Dashboard extends Component {
             Delete Bus {' '}
           </Text>
         </Button>
-        )}
+        
           <Button
           large
           full
@@ -160,7 +159,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       borderRadius: 20,
       borderWidth: 4,
-      borderColor: '#4EA688',
+      borderColor: '#3CB982',
       backgroundColor: 'transparent',
       padding: 10,
       fontSize: 20,
@@ -168,5 +167,19 @@ const styles = StyleSheet.create({
       marginRight: '15%',
       marginBottom: '5%',
       marginTop: '5%',
+    },
+    StyleforButton2: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 20,
+      borderWidth: 4,
+      borderColor: '#3CB982',
+      backgroundColor: 'transparent',
+      padding: 10,
+      fontSize: 20,
+      marginLeft: '15%',
+      marginRight: '15%',
+      marginBottom: '5%',
+      marginTop: '60%',
     },
 });

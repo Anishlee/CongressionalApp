@@ -57,8 +57,24 @@ export default class Map extends Component {
                   longitude: -94.23584343944687,
                 },
                 {
-                  latitude: 36.350881,
-                  longitude: -94.1957496,
+                  latitude: 36.3299547,
+                  longitude: -94.24491119999999,
+                },
+                {
+                  latitude: 36.3271208,
+                  longitude: -94.2440099,
+                },
+                {
+                  latitude: 36.3260045,
+                  longitude: -94.2377211,
+                },
+                {
+                  latitude: 36.329386,
+                  longitude: -94.22752849999999,
+                },
+                {
+                  latitude: 36.3518829,
+                  longitude: -94.1953693,
                 },
               ]
               
@@ -90,6 +106,39 @@ export default class Map extends Component {
         else if (this.state.doneThree == false && index == 3) {
           console.log("YES FG3")
           this.setState({doneThree: true})
+        }
+      }
+      measureSliderWidth2 = (index) => {
+        console.log("YES FG")
+        if (this.state.doneOne == false && index == 1) {
+          console.log("YES FG1")
+          this.setState({doneOne: true})
+        }
+        else if (this.state.doneTwo == false && index == 2) {
+          console.log("YES FG2")
+          this.setState({doneTwo: true}) 
+        }
+        else if (this.state.doneThree == false && index == 3) {
+          console.log("YES FG3")
+          this.setState({doneThree: true})
+        }
+        else if (this.state.doneFour == false && index == 4) {
+          console.log("YES FG4")
+          this.setState({doneFour: true})
+        }
+      }
+      index2 = (index) => {
+        if (this.state.doneOne == false && index == 1) {
+          setTimeout(() => this.measureSliderWidth(index), 2000);
+        }
+        else if (this.state.doneTwo == false && index == 2) {
+          setTimeout(() => this.measureSliderWidth(index), 2000);
+        }
+        else if (this.state.doneThree == false && index == 3) {
+          setTimeout(() => this.measureSliderWidth(index), 2000);
+        }
+        else if(this.state.doneFour == false && index == 4) {
+          setTimeout(() => this.measureSliderWidth(index), 2000);
         }
       }
       index = (index) => {
@@ -228,6 +277,33 @@ export default class Map extends Component {
         )}
         {(this.state.doneOne == true && this.state.doneTwo == true && this.state.doneThree == true && this.state.doneFour == false) && (
           <MapView.Marker coordinate={this.state.coordinates3[3]} />
+        )}
+        {(this.state.doneOne == false && this.state.doneTwo == false && this.state.doneThree == false && this.state.doneFour == false) && (
+          <MapView.Marker coordinate={this.state.coordinates3[4]} />
+        )}
+        {(this.state.doneOne == false && this.state.doneTwo == false && this.state.doneThree == false && this.state.doneFour == false) && (
+          this.index(1)
+        )}
+        {(this.state.doneOne == true && this.state.doneTwo == false && this.state.doneThree == false && this.state.doneFour == false) && (
+          <MapView.Marker coordinate={this.state.coordinates3[5]} />
+        )}
+        {(this.state.doneOne == true && this.state.doneTwo == false && this.state.doneThree == false && this.state.doneFour == false) && (
+          this.index2(2)
+        )}
+        {(this.state.doneOne == true && this.state.doneTwo == true && this.state.doneThree == false && this.state.doneFour == false) && (
+          <MapView.Marker coordinate={this.state.coordinates3[6]} />
+        )}
+        {(this.state.doneOne == true && this.state.doneTwo == true && this.state.doneThree == false && this.state.doneFour == false) && (
+          this.index2(3)
+        )}
+        {(this.state.doneOne == true && this.state.doneTwo == true && this.state.doneThree == true && this.state.doneFour == false) && (
+          <MapView.Marker coordinate={this.state.coordinates3[7]} />
+        )}
+        {(this.state.doneOne == true && this.state.doneTwo == true && this.state.doneThree == false && this.state.doneFour == false) && (
+          this.index2(4)
+        )}
+        {(this.state.doneOne == true && this.state.doneTwo == true && this.state.doneThree == true && this.state.doneFour == false) && (
+          <MapView.Marker coordinate={this.state.coordinates3[8]} />
         )}
         
             <MapViewDirections

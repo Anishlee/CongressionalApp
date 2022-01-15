@@ -227,13 +227,16 @@ export default class CreateAccount extends Component {
               Keyboard.dismiss();
             }}
           >
-            <View style={{ backgroundColor: "#f0ffff" }}>
+            <View style={{ backgroundColor: "#ffffff" }}>
+            <View style = {{backgroundColor: "#3CB982"}}> 
               <Text style={styles.titleStyle}>
                 {" "}
                 Create
                 <Text style={styles.titleStyle2}> an </Text>
                 <Text style={styles.titleStyle}>Account </Text>
               </Text>
+              </View>
+              <Text style={{marginBottom: 50}}> </Text>
               <Text style = {styles.subheadingStyle}>Choose which bus to delete:</Text>
               <Text style = {{marginBottom: -25}}></Text>
               <Picker
@@ -282,6 +285,7 @@ export default class CreateAccount extends Component {
                     fontSize: 20,
                     fontWeight: '500',
                     textAlign: 'center',
+                    color: "white"
                   }}>
                   {' '}
                   Delete{' '}
@@ -303,7 +307,7 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 20,
     borderTopWidth: 0,
-    borderBottomColor: "black",
+    borderBottomColor: "#3CB982",
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderWidth: 1,
@@ -313,27 +317,29 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 20,
     borderTopWidth: 0,
-    borderBottomColor: "black",
+    borderBottomColor: "#3CB982",
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderWidth: 1,
     padding: 10,
   },
   titleStyle: {
-    color: "black",
+    color: "white",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 40,
-    marginTop: 50,
-    marginBottom: 20,
+    marginTop: 100,
+    marginBottom: 100,
+    justifyContent: 'center'
   },
   titleStyle2: {
-    color: "#008b8b",
+    color: "white",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 40,
     marginTop: 50,
     marginBottom: 20,
+    justifyContent: 'center'
   },
 
   subheadingStyle: {
@@ -344,11 +350,19 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   subheadingStyle2: {
-    color: "#008b8b",
+    color: "#3CB982",
     textAlign: "center",
     fontSize: 22.5,
     fontWeight: "bold",
     marginBottom: 5,
+  },
+  subheadingStyle3: {
+    color: "black",
+    textAlign: "center",
+    fontSize: 22.5,
+    fontWeight: "bold",
+    marginBottom: -30,
+    marginTop: 50
   },
   errorText: {
     color: "red",
@@ -367,8 +381,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 20,
     borderWidth: 4,
-    borderColor: '#4EA688',
-    backgroundColor: 'transparent',
+    borderColor: '#3CB982',
+    backgroundColor: '#3CB982',
     padding: 10,
     fontSize: 20,
     marginLeft: '15%',

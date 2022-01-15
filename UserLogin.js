@@ -123,12 +123,15 @@ export default class UserLogin extends Component {
               Keyboard.dismiss();
             }}
           >
-      <View style={{ backgroundColor: "#f0ffff" }}>
+      <View style={{ backgroundColor: "#ffffff" }}>
+        <View style = {{backgroundColor: "#3CB982"}}>
         <Text style={styles.titleStyle}>
           Login
           <Text style={styles.titleStyle2}> Page </Text>
         </Text>
-        <Text style={styles.subheadingStyle2}>Please enter your Parent's email:</Text>
+        </View>
+        <Text style={{ marginTop: 50 }}></Text>
+        <Text style={styles.subheadingStyle2}>Please enter your email:</Text>
         <TextInput
           style={styles.emailstyle}
           keyboardType="email-address"
@@ -152,7 +155,7 @@ export default class UserLogin extends Component {
         {this.state.inValidUser === "" && (
           <Text style={styles.errorText}>Your credentials are incorrect</Text>
         )}
-        <Text style={{ marginBottom: 95 }}></Text>
+        <Text style={{ marginBottom: 50 }}></Text>
         <Text style={styles.subheadingStyle}>Password:</Text>
         <TextInput
           style={styles.passwordstyle}
@@ -178,11 +181,11 @@ export default class UserLogin extends Component {
         {this.state.inValidUser === "" && (
           <Text style={styles.errorText}>Your credentials are incorrect</Text>
         )}
-        <Text style={{ marginBottom: 95 }}></Text>
+        <Text style={{ marginBottom: 50 }}></Text>
         <View style={{ fontSize: 30 }}>
           <Button
             title="Submit"
-            color="#008b8b"
+            color="#3CB982"
             onPress={() =>
               this.checkForCredentials(
                 this.state.typedText,
@@ -192,10 +195,10 @@ export default class UserLogin extends Component {
           ></Button>
         </View>
         <View style={styles.ButtonContainer}>
-          <Text style={{ fontSize: 18, marginRight: 10 }}> New to app? </Text>
+          <Text style={{ fontSize: 18, marginRight: 10 }}> New to app?     </Text>
           <Button
             title="Create an account"
-            color="#008b8b"
+            color="#3CB982"
             onPress={() => this.props.navigation.navigate("CreateAccount")}
           />
         </View>
@@ -231,18 +234,19 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 20,
     borderTopWidth: 0,
-    borderBottomColor: "black",
+    borderBottomColor: "#3CB982",
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderWidth: 1,
     padding: 10,
-    marginBottom: 10,
+    marginBottom: 5,
+    marginTop: 20
   },
   passwordstyle: {
     height: 40,
     margin: 20,
     borderTopWidth: 0,
-    borderBottomColor: "black",
+    borderBottomColor: "#3CB982",
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderWidth: 1,
@@ -250,23 +254,23 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   titleStyle: {
-    color: "black",
+    color: "white",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 40,
-    marginTop: 50,
-    marginBottom: 105,
+    marginTop: 100,
+    marginBottom: 90,
   },
   titleStyle2: {
-    color: "#008b8b",
+    color: "white",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 40,
-    marginTop: 50,
-    marginBottom: 105,
+    marginTop: 100,
+    marginBottom: 55,
   },
   subheadingStyle: {
-    color: "#008b8b",
+    color: "black",
     textAlign: "center",
     fontSize: 22.5,
     fontWeight: "bold",

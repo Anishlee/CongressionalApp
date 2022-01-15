@@ -1,13 +1,23 @@
 import React, { Component } from "react";
 import { Text, View , StyleSheet, ScrollView} from "react-native";
 import { Button } from "native-base";
+import FastImage from 'react-native-fast-image';
 export default class HomePage extends Component {
   render() {
     return (
       <View style = {{backgroundColor: "#ffffff"}}>
         <ScrollView>
+        <FastImage
+              style={{
+                width: 200,
+                height: 200,
+                marginBottom: '10%',
+                marginTop: '2%',
+                alignSelf: "center"
+              }}
+              source={require('./bus.png')}
+            />
         <Text style = {styles.titleStyle}> Welcome to the App! </Text>
-        <Text style = {styles.subheadingStyle}> Would you like to login as a user or a admin?</Text>
         <Button
                   large
                   full
@@ -19,6 +29,7 @@ export default class HomePage extends Component {
                       fontSize: 20,
                       fontWeight: '500',
                       textAlign: 'center',
+                      color: "white"
                     }}>
                     {' '}
                     User{' '}
@@ -35,6 +46,7 @@ export default class HomePage extends Component {
                       fontSize: 20,
                       fontWeight: '500',
                       textAlign: 'center',
+                      color: "white"
                     }}>
                     {' '}
                     Admin{' '}
@@ -43,7 +55,7 @@ export default class HomePage extends Component {
                 <Button
                   large
                   full
-                  style={styles.StyleforButton}
+                  style={styles.StyleforButton2}
                   onPress = {() => this.props.navigation.navigate("CreateAccount")}
                   >
                   <Text
@@ -90,12 +102,12 @@ const styles = StyleSheet.create({
       marginBottom: 10,
     },
     titleStyle: {
-      color: "black",
+      color: "#3CB982",
       textAlign: "center",
       fontWeight: "bold",
       fontSize: 38,
-      marginTop: 50,
-      marginBottom: 105,
+      marginTop: 10,
+      marginBottom: 30,
     },
     titleStyle2: {
       color: "#008b8b",
@@ -138,7 +150,35 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 20,
         borderWidth: 4,
-        borderColor: '#4EA688',
+        borderColor: '#3CB982',
+        backgroundColor: '#3CB982',
+        padding: 10,
+        fontSize: 20,
+        marginLeft: '15%',
+        marginRight: '15%',
+        marginBottom: '5%',
+        marginTop: '5%',
+      },
+      StyleforButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 20,
+        borderWidth: 4,
+        borderColor: '#3CB982',
+        backgroundColor: '#3CB982',
+        padding: 10,
+        fontSize: 20,
+        marginLeft: '15%',
+        marginRight: '15%',
+        marginBottom: '5%',
+        marginTop: '5%',
+      },
+      StyleforButton2: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 20,
+        borderWidth: 4,
+        borderColor: '#3CB982',
         backgroundColor: 'transparent',
         padding: 10,
         fontSize: 20,

@@ -11,6 +11,9 @@ import Dashboard from './Dashboard';
 import CreateNewBus from './CreateNewBus';
 import DeleteBus from './DeleteBus';
 import UserDashboard from './UserDashboard';
+import UserDashboardMap from './UserDashboardMap';
+import BusInfo from "./BusInfo";
+import Students from "./Students"
 /*
 require('../assets/images/map.png')
 headerBackground: (
@@ -22,10 +25,22 @@ headerBackground: (
 />
 ),*/
 const screens = {
+  Students: {
+    screen: Students,
+    navigationOptions: {
+      title: 'Students',
+    },
+  },
   Map: {
     screen: Map,
     navigationOptions: {
       title: 'Map',
+    },
+  },
+  BusInfo: {
+    screen: BusInfo,
+    navigationOptions: {
+      title: 'BusInfo',
     },
   },
   UserDashboard: {
@@ -74,6 +89,12 @@ const screens = {
     screen: CreateAccount,
     navigationOptions: {
       title: 'CreateAccount',
+    },
+  },
+  UserDashboardMap: {
+    screen: UserDashboardMap,
+    navigationOptions: {
+      title: 'UserDashboardMap',
     },
   },
 };
